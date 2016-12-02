@@ -15,4 +15,8 @@ public class TestServiceImpl implements TestService {
 	public List<TestInfo> getloadAll() {
 		return mapper.getloadAll();
 	}
+	@Override
+	public TestInfo selectTestInfo(String id) {
+		return mapper.selectTestInfo(id);
+	}
 }

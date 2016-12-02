@@ -18,14 +18,16 @@ public class TestController {
 	@Autowired
 	private TestService service;
 	/**
-	 * test/test.do
+	 * test/test.do?id=96899012715610112
 	 * @return
 	 * @throws Exception
 	 */
 	@ResponseBody
 	@RequestMapping(value="test",method=RequestMethod.POST)
-	public Result test() throws Exception{
-		List<TestInfo> test=service.getloadAll();
+	public Result test(String id) throws Exception{
+		//查询全部
+		//List<TestInfo> test=service.getloadAll();
+		TestInfo test=service.selectTestInfo(id);
 		return new Result(200,"成功",test);
 	}
 }

@@ -7,4 +7,7 @@
 	<select id="getloadAll" resultType="com.sunshine.entity.TestInfo">
 		select id,name,sex from testInfo
 	</select>
+	<select id="selectTestInfo" resultType="com.sunshine.entity.TestInfo">
+		select id,name,sex from testInfo where id=#{id}
+	</select>
 </mapper>
