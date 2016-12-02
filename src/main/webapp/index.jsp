@@ -1,5 +1,7 @@
 <html>
-<body>
-<h2>Hello World!</h2>
-</body>
+	<body bgcolor="#F5F5F5">
+		<h3 align="center">
+			<a href="index.jsp" style="text-decoration:none;color:#5CACEE;font-size:25px;">Omat Maven hanke!</a>
+		</h3>
+	</body>
 </html>
