@@ -3,11 +3,18 @@
 "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!-- mapper中定义的是mybatis对某些业务的sql语句 -->
 <mapper namespace="com.sunshine.mapper.TestMapper">
+	<!-- spring缓存 -->
 	<cache readOnly="true" size="500" flushInterval="120000" eviction="LRU"/>
+	<!--查询全部 -->
 	<select id="getloadAll" resultType="com.sunshine.entity.TestInfo">
 		select id,name,sex from testInfo
 	</select>
+	<!--根据id查询-->
 	<select id="selectTestInfo" resultType="com.sunshine.entity.TestInfo">
 		select id,name,sex from testInfo where id=#{id}
 	</select>
+	<!--根据id修改名字-->
+	<update id="updatename" parameterType="com.sunshine.entity.TestInfo">
+		update testInfo set name=#{name} where id=#{id}
+	</update>
 </mapper>
