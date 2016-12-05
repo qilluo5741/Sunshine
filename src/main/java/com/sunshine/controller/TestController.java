@@ -40,10 +40,10 @@ public class TestController {
 			if(service.updatename(name,id)>=0){
 				return new Result(200,"修改成功！",true);
 			}
-			/*byte[] by = Base64.decode(headportrait);
+			byte[] by = Base64.decode(headportrait);
 			ByteArrayInputStream bais = new ByteArrayInputStream(by);
 			String headimg = this.fileService.uploadImage(bais);
-			System.out.println(headimg+"图片链接");*/
+			System.out.println(headimg+"图片链接");
 		} catch (Exception e) {
 			log.error("修改失败异常！");
 			System.out.println("修改失败异常！");
