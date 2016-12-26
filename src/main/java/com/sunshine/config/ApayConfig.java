@@ -4,7 +4,6 @@ package com.sunshine.config;
  * 支付宝配置参数 采用单利模式配置
  */
 public  class ApayConfig {
-	
 	private static ApayConfig apay;
 
 	// 不让外部初始化对象
